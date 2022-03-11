@@ -1,51 +1,59 @@
 <script context="module">
-  import { base } from '$app/paths';
-
-  export async function load({ fetch }) {
-    const posts = await fetch(`${base}/index.json`)
-        .then((r) => r.json());
-    return {
-      props: { posts }
-    }
-  }
+	export const prerender = true;
 </script>
 
 <script>
-  export let posts;
+	import Counter from '$lib/Counter.svelte';
 </script>
 
 <svelte:head>
-  <title>Home</title>
+	<title>Home</title>
 </svelte:head>
 
-<div>
-  <h1>SvelteKit Blog</h1>
-  <p class="info">{posts.length} posts.</p>
-  {#each posts as post}
-    <a href={`${base}/${post.slug}`}>
-      <h2 class="title">{post.metadata.title}</h2>
-      <p>{post.metadata.excerpt}</p>
-    </a>
-  {/each}
-</div>
+<section>
+	<h1>
+		<div class="welcome">
+			<picture>
+				<source srcset="svelte-welcome.webp" type="image/webp" />
+				<img src="svelte-welcome.png" alt="Welcome" />
+			</picture>
+		</div>
 
-<style lang="scss">
+		to your new<br />SvelteKit app
+	</h1>
 
-  h1 {
-    margin-bottom: 0;
-  }
+	<h2>
+		try editing <strong>src/routes/index.svelte</strong>
+	</h2>
 
-  h2.title {
-    margin-top: 32px;
-    margin-bottom: 0;
+	<Counter />
+</section>
 
-    &:hover {
-      color: #40b3ff;
-    }
-  }
+<style>
+	section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex: 1;
+	}
 
-  p {
-    color: #555;
-    margin: 0;
-  }
+	h1 {
+		width: 100%;
+	}
+
+	.welcome {
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding: 0 0 calc(100% * 495 / 2048) 0;
+	}
+
+	.welcome img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		display: block;
+	}
 </style>
