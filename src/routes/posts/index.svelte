@@ -2,7 +2,7 @@
   import { base } from '$app/paths';
 
   export async function load({ fetch }) {
-    const posts = await fetch(`${base}/index.json`)
+    const posts = await fetch(`${base}/posts/index.json`)
         .then((r) => r.json());
     return {
       props: { posts }
@@ -28,7 +28,7 @@
     </a>
   {/each}
 </div>
-<!--
+
 <style lang="scss">
 
   h1 {
@@ -49,4 +49,3 @@
     margin: 0;
   }
 </style>
--->
