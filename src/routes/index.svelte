@@ -29,6 +29,7 @@
   {/each}
 </div>
 
+!--
 <style lang="scss">
 
   h1 {
@@ -49,3 +50,4 @@
     margin: 0;
   }
 </style>
+-->
