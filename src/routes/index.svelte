@@ -28,26 +28,3 @@
     </a>
   {/each}
 </div>
-
-!--
-<style lang="scss">
-
-  h1 {
-    margin-bottom: 0;
-  }
-
-  h2.title {
-    margin-top: 32px;
-    margin-bottom: 0;
-
-    &:hover {
-      color: #40b3ff;
-    }
-  }
-
-  p {
-    color: #555;
-    margin: 0;
-  }
-</style>
--->
