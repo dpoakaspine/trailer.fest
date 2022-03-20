@@ -1,45 +1,30 @@
 <script>
-	import Header from '$lib/header/Header.svelte';
-	import '../app.css';
+	import '../app.scss';
+  import Nav from '$lib/Nav.svelte';
+  import GithubCorner from '$lib/GithubCorner.svelte';
 </script>
 
-<Header />
+<svelte:head>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/github.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Overpass">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Fira+Mono">
+</svelte:head>
 
-<main>
-	<slot />
-</main>
+<GithubCorner/>
 
-<footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-</footer>
+<div class="g-app-wrapper">
+  <Nav/>
+  <slot></slot>
+</div>
 
-<style>
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+<style lang="scss">
+  .g-app-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+  }
 
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
-		}
-	}
 </style>
