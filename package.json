@@ -2,11 +2,10 @@
 	"name": "svelte-kit-blog-demo",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "svelte-kit dev",
-		"build": "rm -rf build && svelte-kit build && touch .svelte-kit/static/build/.nojekyll",
-		"start": "svelte-kit start",
-		"deploy": "npm run build && npx gh-pages -d .svelte-kit/static/build -t true"
-	},
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "preview": "svelte-kit preview"
+  },
 	"devDependencies": {
 		"@sveltejs/adapter-node": "next",
 		"@sveltejs/adapter-static": "^1.0.0-next.0",
