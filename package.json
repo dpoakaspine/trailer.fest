@@ -1,29 +1,42 @@
 {
-	"name": "svelte-kit-blog-demo",
-	"version": "0.0.1",
-	"scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "preview": "svelte-kit preview"
+  "name": "gatsby-starter-default",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "gatsby": "^3.0.0",
+    "gatsby-image": "^3.5.0",
+    "gatsby-plugin-manifest": "^3.5.0",
+    "gatsby-plugin-offline": "^4.5.0",
+    "gatsby-plugin-react-helmet": "^4.5.0",
+    "gatsby-plugin-sharp": "^3.5.0",
+    "gatsby-source-filesystem": "^3.5.0",
+    "gatsby-transformer-sharp": "^3.5.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0"
   },
-	"devDependencies": {
-		"@sveltejs/adapter-node": "next",
-		"@sveltejs/adapter-static": "^1.0.0-next.0",
-		"@sveltejs/kit": "next",
-		"dayjs": "^1.10.4",
-		"js-yaml": "^3.14.1",
-		"rehype-highlight": "^4.1.0",
-		"rehype-stringify": "^8.0.0",
-		"remark-frontmatter": "^3.0.0",
-		"remark-gfm": "^1.0.0",
-		"remark-parse": "^9.0.0",
-		"remark-rehype": "^8.0.0",
-		"sass": "^1.0.0",
-		"svelte": "^3.29.0",
-		"svelte-preprocess": "^4.0.0",
-		"to-vfile": "^6.1.0",
-		"unified": "^9.2.1",
-		"vite": "^2.1.0"
-	},
-	"type": "module"
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
 }
