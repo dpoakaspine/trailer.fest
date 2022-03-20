@@ -3,4 +3,4 @@ services:
     name: sveltekit
     env: node
     buildCommand: npm install && npm run build
-    startCommand: node build/index.js
+    startCommand: node $app/index.js
