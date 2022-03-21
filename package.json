@@ -12,7 +12,6 @@
     "gatsby-plugin-react-helmet": "^4.5.0",
     "gatsby-plugin-sharp": "^3.5.0",
     "gatsby-source-filesystem": "^3.5.0",
-    "gatsby-transformer-remark": "next",
     "gatsby-transformer-sharp": "^3.5.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
@@ -25,7 +24,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "yarn; gatsby develop",
+    "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
