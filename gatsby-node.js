@@ -1,7 +1,12 @@
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
+  console.log(actions)
+  console.log("graphql")
+  console.log(graphql)
+
   const blogPostTemplate = require.resolve(`./src/templates/blogTemplate.js`)
+  const projectTemplate = require.resolve(`./src/pages/i/blogTemplate.js`)
 
   return graphql(`
     {
@@ -12,7 +17,9 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             frontmatter {
-              slug
+              slug,
+              tags,
+              glossary
             }
           }
         }
@@ -23,6 +30,9 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
+    console.log(result)
+
+
     return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.slug,
@@ -30,6 +40,8 @@ exports.createPages = ({ actions, graphql }) => {
         context: {
           // additional data can be passed via context
           slug: node.frontmatter.slug,
+          tags: node.frontmatter.tags,
+          glossary: node.frontmatter.glossary,
         },
       })
     })

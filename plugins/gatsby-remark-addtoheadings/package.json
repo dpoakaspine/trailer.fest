@@ -1,0 +1,15 @@
+{
+  "name": "gatsby-remark-addtoheadings",
+  "version": "1.0.0",
+  "description": "Adds Code to HTML headings",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gatesby",
+    "html"
+  ],
+  "author": "Stefan Böttcher",
+  "license": "ISC"
+}

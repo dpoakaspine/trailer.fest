@@ -1,15 +1,15 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from '../components/layout'
-import Image from '../components/image'
-import Seo from '../components/seo'
+import Layout from '../../components/layout'
+import Image from '../../components/image'
+import Seo from '../../components/seo'
 
-import Item, { Product, Quote, Glossary } from '../components/Item'
-import Section from '../components/Section'
+import Item, { Product, Quote, Glossary } from '../../components/Item'
+import Section from '../../components/Section'
 
-import System from '../components/System'
-import Waypoint from '../components/Waypoint'
+import System from '../../components/System'
+import Waypoint from '../../components/Waypoint'
 
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
@@ -24,6 +24,7 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
 
   var item = new Item(frontmatter)
+  return ( JSON.stringify( item, 2, null ) )
   return (
 
     <Layout>
@@ -50,7 +51,7 @@ export default function Template({
         <Container className="p-4 container-sm" style={{ maxWidth2: '700px', overflow2: "hidden" } }>
 
 
-        <h1>111{ item.get_the_title() }</h1>
+        <h1>{ item.get_the_title() }</h1>
 
                 <div className="sticky-topxx">
 
